@@ -1,0 +1,1411 @@
+07:01:45,444 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for PostgreSQL 9
+07:01:45,510 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.PostgreSQLDialect
+07:02:10,471 INFO  [localhost-startStop-1][StartupAction:96] There are no patches installed
+07:02:11,304 INFO  [localhost-startStop-1][BaseDB:481] Database supports case sensitive queries
+07:02:11,741 INFO  [localhost-startStop-1][ServerDetector:138] Server supports hot deploy
+07:02:11,746 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+07:02:14,787 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/deploy
+07:02:17,207 INFO  [liferay/scheduler_dispatch-3][PluginPackageUtil:1280] Reloading repositories
+07:02:21,010 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+07:02:21,032 INFO  [localhost-startStop-1][HotDeployImpl:273] Queueing calendar-portlet for deploy because it is missing marketplace-portlet
+07:02:23,180 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+07:02:23,182 INFO  [localhost-startStop-1][HotDeployImpl:273] Queueing kaleo-web for deploy because it is missing marketplace-portlet
+07:02:24,060 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying marketplace-portlet from queue
+07:02:24,061 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+07:02:24,141 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:25,159 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for marketplace-portlet
+07:02:25,202 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:25,204 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:25,382 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for marketplace-portlet is available for use
+07:02:25,388 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for marketplace-portlet
+07:02:25,700 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 3 portlets for marketplace-portlet are available for use
+07:02:25,701 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying calendar-portlet from queue
+07:02:25,702 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+07:02:25,707 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:26,712 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:26,712 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:26,988 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for calendar-portlet
+07:02:28,287 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for calendar-portlet is available for use
+07:02:28,308 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for calendar-portlet
+07:02:28,443 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for calendar-portlet is available for use
+07:02:28,444 INFO  [localhost-startStop-1][SocialHotDeployListener:94] Registering social for calendar-portlet
+07:02:28,445 INFO  [localhost-startStop-1][SocialHotDeployListener:103] Social for calendar-portlet is available for use
+07:02:28,446 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying kaleo-web from queue
+07:02:28,446 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+07:02:28,459 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:29,461 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:29,462 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:31,600 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for kaleo-web
+07:02:31,622 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for kaleo-web is available for use
+07:02:32,925 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+07:02:32,926 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying notifications-portlet from queue
+07:02:32,926 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+07:02:32,929 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:33,310 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for notifications-portlet
+07:02:33,560 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for notifications-portlet is available for use
+07:02:33,562 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for notifications-portlet
+07:02:33,661 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for notifications-portlet are available for use
+07:02:33,931 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:33,932 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:36,246 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+07:02:36,246 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying opensocial-portlet from queue
+07:02:36,247 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+07:02:36,250 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:37,252 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:37,253 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:37,258 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for opensocial-portlet
+07:02:37,310 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for opensocial-portlet is available for use
+07:02:37,314 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for opensocial-portlet
+07:02:37,429 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 4 portlets for opensocial-portlet are available for use
+07:02:38,568 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+07:02:38,569 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying resources-importer-web from queue
+07:02:38,569 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+07:02:38,572 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:38,733 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for resources-importer-web
+07:02:38,742 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for resources-importer-web is available for use
+07:02:39,501 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+07:02:39,501 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying sync-web from queue
+07:02:39,501 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for sync-web
+07:02:39,576 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:39,577 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:39,578 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:40,583 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:40,584 WARN  [liferay/search_writer/SYSTEM_ENGINE-2][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:40,697 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+07:02:40,698 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying web-form-portlet from queue
+07:02:40,698 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+07:02:40,701 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:40,843 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for web-form-portlet
+07:02:40,908 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for web-form-portlet is available for use
+07:02:41,467 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin welcome-theme requires marketplace-portlet, resources-importer-web
+07:02:41,468 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying welcome-theme from queue
+07:02:41,468 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for welcome-theme
+07:02:41,610 INFO  [localhost-startStop-1][ThemeHotDeployListener:98] Registering themes for welcome-theme
+07:02:41,703 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:41,704 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:41,704 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:41,959 INFO  [localhost-startStop-1][ThemeHotDeployListener:113] 1 theme for welcome-theme is available for use
+07:02:42,015 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin welcome-theme requires marketplace-portlet, resources-importer-web
+07:02:42,016 INFO  [localhost-startStop-1][ThemeHotDeployListener:140] Unregistering themes for welcome-theme
+07:02:42,018 INFO  [localhost-startStop-1][ThemeHotDeployListener:172] 1 theme for welcome-theme was unregistered
+07:02:42,021 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for welcome-theme
+07:02:42,025 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+07:02:42,026 INFO  [localhost-startStop-1][PortletHotDeployListener:525] Unregistering portlets for web-form-portlet
+07:02:42,030 INFO  [localhost-startStop-1][PortletHotDeployListener:560] 1 portlet for web-form-portlet was unregistered
+07:02:42,032 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+07:02:42,034 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+07:02:42,039 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for sync-web
+07:02:42,046 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+07:02:42,050 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for resources-importer-web was unregistered
+07:02:42,051 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+07:02:42,054 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+07:02:42,055 INFO  [localhost-startStop-1][PortletHotDeployListener:525] Unregistering portlets for opensocial-portlet
+07:02:42,058 INFO  [localhost-startStop-1][PortletHotDeployListener:565] 4 portlets for opensocial-portlet were unregistered
+07:02:42,140 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for opensocial-portlet was unregistered
+07:02:42,144 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+07:02:42,150 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+07:02:42,150 INFO  [localhost-startStop-1][PortletHotDeployListener:525] Unregistering portlets for notifications-portlet
+07:02:42,153 INFO  [localhost-startStop-1][PortletHotDeployListener:565] 2 portlets for notifications-portlet were unregistered
+07:02:42,218 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for notifications-portlet was unregistered
+07:02:42,220 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+07:02:42,223 INFO  [localhost-startStop-1][PortletHotDeployListener:525] Unregistering portlets for marketplace-portlet
+07:02:42,226 INFO  [localhost-startStop-1][PortletHotDeployListener:565] 3 portlets for marketplace-portlet were unregistered
+07:02:42,227 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for marketplace-portlet was unregistered
+07:02:42,231 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+07:02:42,236 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+07:02:42,236 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for kaleo-web was unregistered
+07:02:42,254 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+07:02:42,258 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+07:02:42,260 INFO  [localhost-startStop-1][SocialHotDeployListener:159] Social for calendar-portlet was unregistered
+07:02:42,261 INFO  [localhost-startStop-1][PortletHotDeployListener:525] Unregistering portlets for calendar-portlet
+07:02:42,266 INFO  [localhost-startStop-1][PortletHotDeployListener:560] 1 portlet for calendar-portlet was unregistered
+07:02:42,358 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for calendar-portlet was unregistered
+07:02:42,367 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+07:02:42,709 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:02:42,710 WARN  [liferay/search_writer/SYSTEM_ENGINE-2][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:07,566 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for PostgreSQL 9
+07:07:07,599 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.PostgreSQLDialect
+07:07:27,696 INFO  [localhost-startStop-1][StartupAction:96] There are no patches installed
+07:07:28,294 INFO  [localhost-startStop-1][BaseDB:481] Database supports case sensitive queries
+07:07:28,683 INFO  [localhost-startStop-1][ServerDetector:138] Server supports hot deploy
+07:07:28,687 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+07:07:30,593 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/deploy
+07:07:32,343 INFO  [liferay/scheduler_dispatch-5][PluginPackageUtil:1280] Reloading repositories
+07:07:35,344 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+07:07:35,348 INFO  [localhost-startStop-1][HotDeployImpl:273] Queueing calendar-portlet for deploy because it is missing marketplace-portlet
+07:07:37,081 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+07:07:37,082 INFO  [localhost-startStop-1][HotDeployImpl:273] Queueing kaleo-web for deploy because it is missing marketplace-portlet
+07:07:37,694 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying marketplace-portlet from queue
+07:07:37,696 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+07:07:37,763 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:38,436 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for marketplace-portlet
+07:07:38,543 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for marketplace-portlet is available for use
+07:07:38,548 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for marketplace-portlet
+07:07:38,717 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 3 portlets for marketplace-portlet are available for use
+07:07:38,718 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying calendar-portlet from queue
+07:07:38,719 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+07:07:38,801 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:38,803 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:38,803 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:39,809 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:39,810 WARN  [liferay/search_writer/SYSTEM_ENGINE-2][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:40,037 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for calendar-portlet
+07:07:40,993 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for calendar-portlet is available for use
+07:07:41,003 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for calendar-portlet
+07:07:41,089 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for calendar-portlet is available for use
+07:07:41,089 INFO  [localhost-startStop-1][SocialHotDeployListener:94] Registering social for calendar-portlet
+07:07:41,090 INFO  [localhost-startStop-1][SocialHotDeployListener:103] Social for calendar-portlet is available for use
+07:07:41,091 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying kaleo-web from queue
+07:07:41,091 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+07:07:41,105 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:42,109 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:42,109 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:43,585 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for kaleo-web
+07:07:43,615 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for kaleo-web is available for use
+07:07:44,952 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+07:07:44,953 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying notifications-portlet from queue
+07:07:44,953 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+07:07:44,956 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:45,407 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for notifications-portlet
+07:07:45,768 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for notifications-portlet is available for use
+07:07:45,770 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for notifications-portlet
+07:07:45,865 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for notifications-portlet are available for use
+07:07:45,959 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:45,960 WARN  [liferay/search_writer/SYSTEM_ENGINE-2][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:47,998 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+07:07:47,999 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying opensocial-portlet from queue
+07:07:48,000 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+07:07:48,006 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:49,011 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:49,012 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:49,182 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for opensocial-portlet
+07:07:49,243 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for opensocial-portlet is available for use
+07:07:49,246 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for opensocial-portlet
+07:07:49,391 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 4 portlets for opensocial-portlet are available for use
+07:07:51,083 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+07:07:51,084 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying resources-importer-web from queue
+07:07:51,085 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+07:07:51,100 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:51,371 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for resources-importer-web
+07:07:51,376 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for resources-importer-web is available for use
+07:07:52,106 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:52,107 WARN  [liferay/search_writer/SYSTEM_ENGINE-2][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:52,203 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+07:07:52,203 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying sync-web from queue
+07:07:52,204 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for sync-web
+07:07:52,207 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:53,208 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:53,209 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:53,816 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+07:07:53,816 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying web-form-portlet from queue
+07:07:53,816 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+07:07:53,819 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:54,016 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for web-form-portlet
+07:07:54,108 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for web-form-portlet is available for use
+07:07:54,817 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin welcome-theme requires marketplace-portlet, resources-importer-web
+07:07:54,817 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying welcome-theme from queue
+07:07:54,817 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for welcome-theme
+07:07:54,824 ERROR [liferay/search_writer/SYSTEM_ENGINE-2][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:54,825 WARN  [liferay/search_writer/SYSTEM_ENGINE-2][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:54,826 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:336] Check Lucene directory failed for 0
+org.apache.lucene.store.LockReleaseFailedException: Cannot forcefully unlock a NativeFSLock which is held by another indexer component: /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.NativeFSLock.release(NativeFSLockFactory.java:294)
+	at org.apache.lucene.index.IndexWriter.unlock(IndexWriter.java:4654)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._checkLuceneDir(IndexAccessorImpl.java:332)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:87)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:54,934 INFO  [localhost-startStop-1][ThemeHotDeployListener:98] Registering themes for welcome-theme
+07:07:55,120 INFO  [localhost-startStop-1][ThemeHotDeployListener:113] 1 theme for welcome-theme is available for use
+07:07:55,160 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin welcome-theme requires marketplace-portlet, resources-importer-web
+07:07:55,162 INFO  [localhost-startStop-1][ThemeHotDeployListener:140] Unregistering themes for welcome-theme
+07:07:55,164 INFO  [localhost-startStop-1][ThemeHotDeployListener:172] 1 theme for welcome-theme was unregistered
+07:07:55,167 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for welcome-theme
+07:07:55,169 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+07:07:55,169 INFO  [localhost-startStop-1][PortletHotDeployListener:525] Unregistering portlets for web-form-portlet
+07:07:55,176 INFO  [localhost-startStop-1][PortletHotDeployListener:560] 1 portlet for web-form-portlet was unregistered
+07:07:55,178 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+07:07:55,182 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+07:07:55,190 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for sync-web
+07:07:55,199 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+07:07:55,201 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for resources-importer-web was unregistered
+07:07:55,203 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+07:07:55,206 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+07:07:55,207 INFO  [localhost-startStop-1][PortletHotDeployListener:525] Unregistering portlets for opensocial-portlet
+07:07:55,211 INFO  [localhost-startStop-1][PortletHotDeployListener:565] 4 portlets for opensocial-portlet were unregistered
+07:07:55,334 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for opensocial-portlet was unregistered
+07:07:55,341 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+07:07:55,347 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+07:07:55,347 INFO  [localhost-startStop-1][PortletHotDeployListener:525] Unregistering portlets for notifications-portlet
+07:07:55,350 INFO  [localhost-startStop-1][PortletHotDeployListener:565] 2 portlets for notifications-portlet were unregistered
+07:07:55,434 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for notifications-portlet was unregistered
+07:07:55,439 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+07:07:55,447 INFO  [localhost-startStop-1][PortletHotDeployListener:525] Unregistering portlets for marketplace-portlet
+07:07:55,451 INFO  [localhost-startStop-1][PortletHotDeployListener:565] 3 portlets for marketplace-portlet were unregistered
+07:07:55,451 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for marketplace-portlet was unregistered
+07:07:55,456 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+07:07:55,460 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+07:07:55,461 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for kaleo-web was unregistered
+07:07:55,484 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+07:07:55,490 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+07:07:55,491 INFO  [localhost-startStop-1][SocialHotDeployListener:159] Social for calendar-portlet was unregistered
+07:07:55,491 INFO  [localhost-startStop-1][PortletHotDeployListener:525] Unregistering portlets for calendar-portlet
+07:07:55,496 INFO  [localhost-startStop-1][PortletHotDeployListener:560] 1 portlet for calendar-portlet was unregistered
+07:07:55,576 INFO  [localhost-startStop-1][HookHotDeployListener:952] Hook for calendar-portlet was unregistered
+07:07:55,581 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+07:07:55,829 ERROR [liferay/search_writer/SYSTEM_ENGINE-1][IndexAccessorImpl:520] Initializing Lucene writer failed for 0
+org.apache.lucene.store.LockObtainFailedException: Lock obtain timed out: NativeFSLock@/Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/data/lucene/0/write.lock
+	at org.apache.lucene.store.Lock.obtain(Lock.java:84)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1108)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl._initIndexWriter(IndexAccessorImpl.java:506)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:88)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:07:55,830 WARN  [liferay/search_writer/SYSTEM_ENGINE-1][ProxyMessageListener:81] java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexReader.open(IndexReader.java:345)
+	at com.liferay.portal.search.lucene.IndexSearcherManager.<init>(IndexSearcherManager.java:39)
+	at com.liferay.portal.search.lucene.IndexAccessorImpl.<init>(IndexAccessorImpl.java:91)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.getIndexAccessor(LuceneHelperImpl.java:390)
+	at com.liferay.portal.search.lucene.LuceneHelperImpl.updateDocument(LuceneHelperImpl.java:790)
+	at com.liferay.portal.search.lucene.LuceneHelperUtil.updateDocument(LuceneHelperUtil.java:428)
+	at com.liferay.portal.search.lucene.LuceneIndexWriter.updateDocument(LuceneIndexWriter.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyRequest.execute(ProxyRequest.java:85)
+	at com.liferay.portal.kernel.messaging.proxy.ProxyMessageListener.receive(ProxyMessageListener.java:51)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:69)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+07:10:09,693 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for PostgreSQL 9
+07:10:09,727 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.PostgreSQLDialect
+07:10:29,407 INFO  [localhost-startStop-1][StartupAction:96] There are no patches installed
+07:10:29,924 INFO  [localhost-startStop-1][BaseDB:481] Database supports case sensitive queries
+07:10:30,289 INFO  [localhost-startStop-1][ServerDetector:138] Server supports hot deploy
+07:10:30,294 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+07:10:32,216 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for /Users/thanhuan/Downloads/liferay-portal-6.2-ce-ga4/deploy
+07:10:33,975 INFO  [liferay/scheduler_dispatch-1][PluginPackageUtil:1280] Reloading repositories
+07:10:36,594 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+07:10:36,615 INFO  [localhost-startStop-1][HotDeployImpl:273] Queueing calendar-portlet for deploy because it is missing marketplace-portlet
+07:10:37,442 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+07:10:37,442 INFO  [localhost-startStop-1][HotDeployImpl:273] Queueing kaleo-web for deploy because it is missing marketplace-portlet
+07:10:39,068 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying marketplace-portlet from queue
+07:10:39,069 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+07:10:39,739 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for marketplace-portlet
+07:10:39,856 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for marketplace-portlet is available for use
+07:10:39,861 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for marketplace-portlet
+07:10:40,018 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 3 portlets for marketplace-portlet are available for use
+07:10:40,021 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying calendar-portlet from queue
+07:10:40,021 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+07:10:41,073 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for calendar-portlet
+07:10:42,056 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for calendar-portlet is available for use
+07:10:42,066 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for calendar-portlet
+07:10:42,243 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for calendar-portlet is available for use
+07:10:42,243 INFO  [localhost-startStop-1][SocialHotDeployListener:94] Registering social for calendar-portlet
+07:10:42,244 INFO  [localhost-startStop-1][SocialHotDeployListener:103] Social for calendar-portlet is available for use
+07:10:42,245 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying kaleo-web from queue
+07:10:42,245 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+07:10:44,824 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for kaleo-web
+07:10:44,849 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for kaleo-web is available for use
+07:10:46,129 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+07:10:46,129 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying notifications-portlet from queue
+07:10:46,130 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+07:10:46,558 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for notifications-portlet
+07:10:46,902 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for notifications-portlet is available for use
+07:10:46,906 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for notifications-portlet
+07:10:47,005 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for notifications-portlet are available for use
+07:10:48,984 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+07:10:48,985 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying opensocial-portlet from queue
+07:10:48,986 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+07:10:50,114 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for opensocial-portlet
+07:10:50,166 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for opensocial-portlet is available for use
+07:10:50,169 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for opensocial-portlet
+07:10:50,319 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 4 portlets for opensocial-portlet are available for use
+07:10:51,613 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+07:10:51,614 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying resources-importer-web from queue
+07:10:51,614 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+07:10:51,836 INFO  [localhost-startStop-1][HookHotDeployListener:693] Registering hook for resources-importer-web
+07:10:51,840 INFO  [localhost-startStop-1][HookHotDeployListener:821] Hook for resources-importer-web is available for use
+07:10:52,850 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+07:10:52,850 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying sync-web from queue
+07:10:52,851 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for sync-web
+07:10:54,471 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+07:10:54,472 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying web-form-portlet from queue
+07:10:54,472 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+07:10:54,670 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for web-form-portlet
+07:10:54,759 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for web-form-portlet is available for use
+07:10:55,481 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin welcome-theme requires marketplace-portlet, resources-importer-web
+07:10:55,482 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying welcome-theme from queue
+07:10:55,482 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for welcome-theme
+07:10:55,613 INFO  [localhost-startStop-1][ThemeHotDeployListener:98] Registering themes for welcome-theme
+07:10:55,839 INFO  [localhost-startStop-1][ThemeHotDeployListener:113] 1 theme for welcome-theme is available for use
+07:10:58,694 INFO  [liferay/hot_deploy-1][ResourcesImporterHotDeployMessageListener:110] Group or layout set prototype already exists for company liferay.com
+07:25:15,090 INFO  [localhost-startStop-3][HotDeployEvent:145] Plugin welcome-theme requires marketplace-portlet, resources-importer-web
+07:25:15,093 INFO  [localhost-startStop-3][ThemeHotDeployListener:140] Unregistering themes for welcome-theme
+07:25:15,094 INFO  [localhost-startStop-3][ThemeHotDeployListener:172] 1 theme for welcome-theme was unregistered
+07:25:15,096 INFO  [localhost-startStop-3][PluginPackageUtil:1016] Reading plugin package for welcome-theme
+07:25:15,103 INFO  [localhost-startStop-3][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+07:25:15,103 INFO  [localhost-startStop-3][PortletHotDeployListener:525] Unregistering portlets for web-form-portlet
+07:25:15,107 INFO  [localhost-startStop-3][PortletHotDeployListener:560] 1 portlet for web-form-portlet was unregistered
+07:25:15,108 INFO  [localhost-startStop-3][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+07:25:15,112 INFO  [localhost-startStop-3][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+07:25:15,116 INFO  [localhost-startStop-3][PluginPackageUtil:1016] Reading plugin package for sync-web
+07:25:15,124 INFO  [localhost-startStop-3][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+07:25:15,126 INFO  [localhost-startStop-3][HookHotDeployListener:952] Hook for resources-importer-web was unregistered
+07:25:15,127 INFO  [localhost-startStop-3][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+07:25:15,129 INFO  [localhost-startStop-3][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+07:25:15,130 INFO  [localhost-startStop-3][PortletHotDeployListener:525] Unregistering portlets for opensocial-portlet
+07:25:15,133 INFO  [localhost-startStop-3][PortletHotDeployListener:565] 4 portlets for opensocial-portlet were unregistered
+07:25:15,179 INFO  [localhost-startStop-3][HookHotDeployListener:952] Hook for opensocial-portlet was unregistered
+07:25:15,184 INFO  [localhost-startStop-3][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+07:25:15,188 INFO  [localhost-startStop-3][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+07:25:15,188 INFO  [localhost-startStop-3][PortletHotDeployListener:525] Unregistering portlets for notifications-portlet
+07:25:15,190 INFO  [localhost-startStop-3][PortletHotDeployListener:565] 2 portlets for notifications-portlet were unregistered
+07:25:15,235 INFO  [localhost-startStop-3][HookHotDeployListener:952] Hook for notifications-portlet was unregistered
+07:25:15,238 INFO  [localhost-startStop-3][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+07:25:15,242 INFO  [localhost-startStop-3][PortletHotDeployListener:525] Unregistering portlets for marketplace-portlet
+07:25:15,243 INFO  [localhost-startStop-3][PortletHotDeployListener:565] 3 portlets for marketplace-portlet were unregistered
+07:25:15,244 INFO  [localhost-startStop-3][HookHotDeployListener:952] Hook for marketplace-portlet was unregistered
+07:25:15,246 INFO  [localhost-startStop-3][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+07:25:15,250 INFO  [localhost-startStop-3][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+07:25:15,251 INFO  [localhost-startStop-3][HookHotDeployListener:952] Hook for kaleo-web was unregistered
+07:25:15,262 INFO  [localhost-startStop-3][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+07:25:15,267 INFO  [localhost-startStop-3][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+07:25:15,267 INFO  [localhost-startStop-3][SocialHotDeployListener:159] Social for calendar-portlet was unregistered
+07:25:15,268 INFO  [localhost-startStop-3][PortletHotDeployListener:525] Unregistering portlets for calendar-portlet
+07:25:15,271 INFO  [localhost-startStop-3][PortletHotDeployListener:560] 1 portlet for calendar-portlet was unregistered
+07:25:15,319 INFO  [localhost-startStop-3][HookHotDeployListener:952] Hook for calendar-portlet was unregistered
+07:25:15,322 INFO  [localhost-startStop-3][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
